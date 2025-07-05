@@ -66,6 +66,37 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: "Exo", sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0 auto;
+    /* Memastikan body terpusat */
+}
+
+/* Kunci latar belakang saat modal aktif */
+body.modal-active {
+    overflow: hidden;
+    /* Mencegah scroll horizontal dan vertikal */
+    position: fixed;
+    /* Mengunci posisi body */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* Pastikan posisi tetap di atas */
+    left: 0;
+    /* Pastikan posisi tetap di kiri */
+}
+
+/* Reset viewport setelah modal ditutup */
+body:not(.modal-active) {
+    position: static;
+    /* Kembalikan ke posisi default */
+    overflow-x: hidden;
+    /* Tetap mencegah scroll horizontal */
+    width: auto;
+    /* Kembalikan lebar default */
+    height: auto;
+    /* Kembalikan tinggi default */
 }
 
 .header-bg {
@@ -100,12 +131,60 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Perbaikan tampilan mobile */
+/* Pastikan container selalu terpusat dan tidak overflow */
+.container {
+    max-width: 100%;
+    /* Mencegah container melebihi lebar layar */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    /* Sesuaikan dengan Tailwind px-6 */
+    padding-right: 1.5rem;
+}
+
+/* Pastikan main terpusat */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pastikan grid di dalam section terpusat */
+section .grid {
+    width: 100%;
+    max-width: 100%;
+    /* Mencegah grid melebihi lebar container */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Batasi lebar gambar agar tidak menyebabkan overflow */
+img {
+    max-width: 100%;
+    /* Pastikan gambar tidak melebihi container */
+    height: auto;
+}
+
+/* Perbaikan tampilan mobile (hanya sesuaikan yang diperlukan) */
 @media (max-width: 768px) {
     .portfolio-card {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* Tidak mengubah container padding, tetap pakai asli */
+    /* Tidak mengubah #name-modal-content, kembali ke asli */
+}
+
+/* Tambahan untuk #home agar responsif */
+#home img {
+    max-width: 100%;
+    /* Pastikan gambar tidak melebihi grid */
+    height: auto;
+    object-fit: cover;
+    /* Mengatur gambar agar sesuai container */
 }
 
 .mobile-menu-bg {

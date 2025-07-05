@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const showNameModal = () => {
+        document.body.classList.add('modal-active'); // Tambahkan kelas saat modal ditampilkan
         nameModal.classList.remove('hidden');
         gsap.to(nameModalContent, { scale: 1, opacity: 1, duration: 0.3, ease: 'power3.out' });
     };
@@ -33,7 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
             opacity: 0,
             duration: 0.2,
             ease: 'power3.in',
-            onComplete: () => nameModal.classList.add('hidden')
+            onComplete: () => {
+                nameModal.classList.add('hidden');
+                document.body.classList.remove('modal-active'); // Hapus kelas saat modal ditutup
+                document.body.style.position = ''; // Reset posisi body
+                document.body.style.width = ''; // Reset lebar body
+                document.body.style.height = ''; // Reset tinggi body
+                // Reset viewport untuk mencegah zoom
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+                window.scrollTo(0, 0); // Kembali ke posisi atas
+                // Paksa refresh layout
+                setTimeout(() => {
+                    window.dispatchEvent(new Event('resize'));
+                }, 100);
+            }
         });
     };
 
