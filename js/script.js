@@ -107,13 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === DYNAMIC SKILLS ===
     const skills = [
-        { name: "JavaScript", icon: `<img src="/assets/icons/js.png" class="h-5 w-5" alt="JavaScript">` },
-        { name: "TypeScript", icon: `<img src="/assets/icons/ts.png" class="h-5 w-5" alt="TypeScript">` },
-        { name: "React", icon: `<img src="/assets/icons/react.png" class="h-5 w-5" alt="React">` },
-        { name: "Laravel", icon: `<img src="/assets/icons/laravel.png" class="h-5 w-5" alt="Laravel">` },
-        { name: "Tailwind CSS", icon: `<img src="/assets/icons/tailwind.png" class="h-5 w-5" alt="Tailwind CSS">` },
-        { name: "Dart", icon: `<img src="/assets/icons/dart.png" class="h-5 w-5" alt="Dart">` },
-        { name: "Flutter", icon: `<img src="/assets/icons/flutter.png" class="h-5 w-5" alt="Flutter">` },
+        { name: "JavaScript", icon: `<img src="assets/icons/js.png" class="h-5 w-5" alt="JavaScript">` },
+        { name: "TypeScript", icon: `<img src="assets/icons/ts.png" class="h-5 w-5" alt="TypeScript">` },
+        { name: "React", icon: `<img src="assets/icons/react.png" class="h-5 w-5" alt="React">` },
+        { name: "Laravel", icon: `<img src="assets/icons/laravel.png" class="h-5 w-5" alt="Laravel">` },
+        { name: "Tailwind CSS", icon: `<img src="assets/icons/tailwind.png" class="h-5 w-5" alt="Tailwind CSS">` },
+        { name: "Dart", icon: `<img src="assets/icons/dart.png" class="h-5 w-5" alt="Dart">` },
+        { name: "Flutter", icon: `<img src="assets/icons/flutter.png" class="h-5 w-5" alt="Flutter">` },
     ];
 
     const skillsContainer = document.getElementById('skills-container');

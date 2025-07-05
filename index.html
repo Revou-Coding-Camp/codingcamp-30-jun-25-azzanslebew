@@ -5,15 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icon Logo Web -->
     <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
 </head>
 
 <body class="transition-colors duration-500 overflow-x-hidden">
+
+    <!-- Header Content -->
     <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-lg shadow-md header-bg">
+
+        <!-- Navigation Bar -->
         <nav id="navbar" class="container mx-auto px-6 sm:px-8 lg:px-12 py-4 flex justify-between items-center">
             <a href="#home" class="text-2xl font-bold text-gradient">My Portfolio</a>
             <div class="hidden md:flex items-center space-x-8">
@@ -44,6 +58,8 @@
                 </button>
             </div>
         </nav>
+
+        <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden fixed top-16 left-0 right-0 p-4 space-y-4 mobile-menu-bg">
             <a href="#home" class="block py-2 px-4 mobile-nav-link transition-colors duration-300">Home</a>
             <a href="#profile" class="block py-2 px-4 mobile-nav-link transition-colors duration-300">Our Profile</a>
@@ -54,7 +70,10 @@
         </div>
     </header>
 
+    <!-- Main Content -->
     <main class="container mx-auto px-6 py-12 sm:px-8 lg:px-12">
+
+        <!-- Home Section -->
         <section id="home" class="min-h-screen flex items-center py-12">
             <div class="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-12 px-4 sm:px-6 lg:px-8">
                 <div class="text-center md:text-left order-last md:order-first">
@@ -72,6 +91,7 @@
             </div>
         </section>
 
+        <!-- Profile Section -->
         <section id="profile" class="py-24 lg:py-28">
             <h2 class="text-4xl lg:text-5xl font-bold section-title text-center mb-16" data-aos="fade-up">About Me</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center px-4 sm:px-6 lg:px-8">
@@ -94,6 +114,7 @@
             </div>
         </section>
 
+        <!-- Portfolio Section -->
         <section id="portfolio" class="py-24 lg:py-28">
             <h2 class="text-4xl lg:text-5xl font-bold section-title text-center mb-16" data-aos="fade-up">My Portfolio
             </h2>
@@ -141,7 +162,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Tombol See More -->
+
+            <!-- Button See More -->
             <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
                 <a href="#"
                     class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-gradient-to-br transition duration-300">
@@ -153,6 +175,7 @@
             </div>
         </section>
 
+        <!-- Certificate Section -->
         <section id="certificate" class="py-24 lg:py-28">
             <h2 class="text-4xl lg:text-5xl font-bold section-title text-center mb-16" data-aos="fade-up">My Certificate
             </h2>
@@ -200,7 +223,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Tombol See More dengan Ikon Panah -->
+
+            <!-- Button See More -->
             <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="500">
                 <a href="#"
                     class="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-md hover:bg-gradient-to-br transition duration-300">
@@ -212,6 +236,7 @@
             </div>
         </section>
 
+        <!-- Message Us Section -->
         <section id="message" class="py-24 lg:py-28">
             <h2 class="text-4xl lg:text-5xl font-bold section-title text-center mb-16" data-aos="fade-up">Get In Touch
             </h2>
@@ -269,6 +294,7 @@
         </section>
     </main>
 
+    <!-- Footer Content -->
     <footer class="bg-gradient-to-r from-slate-800 to-slate-900 text-slate-300 py-12">
         <div class="container mx-auto px-6 sm:px-8 lg:px-12 text-center">
             <p class="text-lg">© 2025 My Portfolio. Crafted with 💙 and code.</p>
@@ -295,6 +321,7 @@
         </div>
     </footer>
 
+    <!-- Button to Top -->
     <button id="back-to-top"
         class="fixed bottom-6 right-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-3 rounded-full shadow-lg transform translate-y-24 transition-transform duration-500 ease-out">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -302,6 +329,7 @@
         </svg>
     </button>
 
+    <!-- Portfolio Modal -->
     <div id="portfolio-modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden">
         <div id="modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <div id="modal-content"
@@ -321,6 +349,7 @@
         </div>
     </div>
 
+    <!-- Name Modal -->
     <div id="name-modal" class="fixed inset-0 z-[60] flex items-center justify-center hidden">
         <div id="name-modal-overlay" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
         <div id="name-modal-content"
@@ -348,6 +377,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
